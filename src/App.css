@@ -102,3 +102,7 @@ a {
   margin-right: 10px;
   margin-bottom: 4px;
 }
+
+.main-button:hover{
+  background-color: #770917;
+}

@@ -102,7 +102,7 @@ function App() {
     const dataNot = [
       {
         id: 5,
-        content: "Sorry data",
+        content: "We're sorry you do not qualify for this program at this time.",
       },
     ]
 
