@@ -121,6 +121,7 @@ function App() {
     }
   }, [aboutForward])
 
+    // "homepage": "https://srp.ai/quiz/",
   return (
     <>
       <Header />
@@ -134,7 +135,7 @@ function App() {
                     <h1 className='text-center padding-right-left'>Congratulations</h1>
                     <h2 className='text-center padding-right-left'>You may be entitled to financial Compensation of up to <span className='text-red'>$ 150,000</span>.</h2>
                     <p className='text-center sec-para'><span className='bold'>Call us now</span> to find out how much you are entitled to help cover any medical expenses, lost wages, and more.</p>
-                    <h1 className='text-center padding-right-left'>X SPOTS REMAINING</h1>
+                    <h1 className='text-center padding-right-left'>5 SPOTS REMAINING</h1>
                     <h1 className='text-center padding-right-left'>TAP TO CALL</h1>
                   </> :
                   <>
@@ -154,24 +155,24 @@ function App() {
                       <div className='button-div'>
                         {
                           <>
-                            <a className='main-button anchore' href="tel:+18333454120">
+                            <a className='main-button anchore' href="tel:+18333454120" key={i}>
                               <BsFillTelephoneFill />
                               <span>
                                 {index?.callon}
                               </span>
                             </a>
-                            <h1 className='text-center'>It is completely FREE to check</h1>
+                            <h3 className='text-center'>It is completely FREE to check</h3>
                           </>
                         }
                       </div>
                     </> :
                     <>
-                      <h2 className='text-center padding-right-left' key={i}>{index?.content}</h2>
+                      <h2 className='text-center padding-right-left'>{index?.content}</h2>
                       <div className='button-div'>
                         {
-                          index?.button?.map((button) => {
+                          index?.button?.map((button, k) => {
                             return (
-                              <button className='main-button' onClick={() => setAboutForward(button?.step)}>{button?.buttonText}</button>
+                              <button className='main-button' onClick={() => setAboutForward(button?.step)}  key={`${i} | ${k}`}>{button?.buttonText}</button>
                             )
                           })
                         }
