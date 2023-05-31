@@ -29,7 +29,7 @@ const Header = () => {
       <div className='red-line'></div>
       <div className='blue-bg'>
         {/* <p>Join 1,428 Others In South Carolina</p> */}
-        <p>{ipInfo ? "Join 1,428 Others In " + ipInfo?.region_name : 'Join 247,000 Americans who have qualified'}</p>
+        <p>{ipInfo ? "Join 1,428 Others In " + ipInfo?.region_name : 'Join 247,000 American Citizens Who Have Pre-Qualified'}</p>
       </div>
     </div>
   )
