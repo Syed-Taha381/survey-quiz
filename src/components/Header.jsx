@@ -11,7 +11,8 @@ const Header = () => {
         const response = await axios.get('https://api.ipify.org?format=json');
         const data = response.data;
         // setIpAddress(data.ip);
-        const ipApiResponse = await axios.get(`https://ipapi.co/${data.ip}/json/`);
+        const ipApiResponse = await axios.get(`https://api.ipstack.com/${data.ip}?access_key=c25a8e8d3cafe4c5b7c639b88cabf9f5`);
+        // const ipApiResponse = await axios.get(`https://ipapi.co/${data.ip}/json/`);
         const ipInfoData = ipApiResponse.data;
         setIpInfo(ipInfoData);
       } catch (error) {
@@ -21,14 +22,14 @@ const Header = () => {
 
     fetchIpAddress();
   }, []);
-  // console.log(ipInfo.city, "ipInfo.city")
+  // console.log(ipInfo, "ipInfo")
 
   return (
     <div className='full-w'>
       <div className='red-line'></div>
       <div className='blue-bg'>
         {/* <p>Join 1,428 Others In South Carolina</p> */}
-        <p>{ipInfo ? "Join 1,428 Others In " + ipInfo?.region : 'Unable to detacte State'}</p>
+        <p>{ipInfo ? "Join 1,428 Others In " + ipInfo?.region_name : 'Unable to detacte State'}</p>
       </div>
     </div>
   )
