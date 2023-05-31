@@ -42,6 +42,12 @@ a {
   color: #fff;
 }
 
+@media(max-width: 660px) {
+  .blue-bg p {
+    font-size: 13px;
+  }
+}
+
 .container {
   max-width: 768px;
   width: 100%;
