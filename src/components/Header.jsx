@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const Header = () => {
-  const [ipAddress, setIpAddress] = useState('');
+  // const [ipAddress, setIpAddress] = useState('');
   const [ipInfo, setIpInfo] = useState('');
 
   useEffect(() => {
@@ -28,7 +28,7 @@ const Header = () => {
       <div className='red-line'></div>
       <div className='blue-bg'>
         {/* <p>Join 1,428 Others In South Carolina</p> */}
-        <p>{ipInfo ? "Join 1,428 Others In " + ipInfo?.city : 'Unable to detacte State'}</p>
+        <p>{ipInfo ? "Join 1,428 Others In " + ipInfo?.region : 'Unable to detacte State'}</p>
       </div>
     </div>
   )
