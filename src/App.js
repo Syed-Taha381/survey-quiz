@@ -121,7 +121,6 @@ function App() {
     }
   }, [aboutForward])
 
-    // "homepage": "https://srp.ai/quiz/",
   return (
     <>
       <Header />
